@@ -121,7 +121,7 @@
 		<div class="container mt-5" >
 		<div class="row">
 			<div class="col-4">
-				<h6>Horario de Atención</h6>
+				<h6 class="fuente2">Horario de Atención</h6>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, necessitatibus!</p><br>
 				<h5>Direccion</h5>
 				<p>Lorem ipsum dolor sit amet.</p>
