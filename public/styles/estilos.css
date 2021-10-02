@@ -1,0 +1,25 @@
+.fuente{
+    font-family: 'Amatic SC', cursive;
+}
+
+.fuente2{
+    font-family: 'Pacifico', cursive;
+}
+
+.fondo{
+    background-color: #07A1E1;
+}
+
+.zoom{
+    transition: transform .2;
+}
+
+.zoom:hover{
+    transform: scale(1.3);
+}
+/* unidades relativas */
+.fondoApp{
+    background-image: url('../img/imagen-fondo.jpg');
+    background-attachment: fixed;
+    height: 400px;
+}
