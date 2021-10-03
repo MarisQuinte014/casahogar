@@ -42,6 +42,7 @@
 			</div>
 		</nav>
 	</header>
+
 	<section>
 		<div class="container mt-5">
 			<div class="row">
@@ -55,7 +56,7 @@
 								<img src="<?= base_url('public/img/imagen2.jpg') ?>" class="d-block w-100" alt="iamgen 2">
 							</div>
 							<div class="carousel-item">
-								<img src="<?= base_url('public/img/imagen1.jpg') ?>" class="d-block w-100" alt="imagen 3">
+								<img src="<?= base_url('public/img/imagen3.jpg') ?>" class="d-block w-100" alt="imagen 3">
 							</div>
 						</div>
 						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -70,7 +71,8 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section><br>
+
 	<section>
 		<div class="container mt-2">
 			<div class="row d-flex justify-content-center">
@@ -81,31 +83,38 @@
 			</div>
 		</div>
 	</section>
+
 	<section>
 		<div class="container">
 			<div class="row d-flex justify-content-center">
 				<div class="col-1">
 					<img src="<?= base_url('public/img/dog-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<h6 class="fuente2 text-center">Mila</h6>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/cat-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<h6 class="fuente2 text-center">Myke</h6>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/bird-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<h6 class="fuente2 text-center">Lupe</h6>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/horse-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<h6 class="fuente2 text-center">Reina</h6>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/rodent-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<h6 class="fuente2 text-center">Azuelejo</h6>
 				</div>
 			</div>
-			<br>
 		</div>
-	</section>
+	</section><br><br>
+
 	<section class="fondoApp"></section>
+
 	<section>
-		<div class="container">
+		<div class="container"><br>
 			<div class="row">
 				<div class="col-6 mt-3">
 					<img src="<?= base_url('public/img/imgen5.jpg') ?>" alt="" class="img-fluid w-100">
@@ -117,30 +126,32 @@
 			</div>
 		</div>
 	</section>
+
 	<footer style="background-color: #EEE9E8;">
-		<div class="container mt-5" >
+		<div class="container mt-5" ><br>
 		<div class="row">
 			<div class="col-4">
-				<h6 class="fuente2">Horario de Atención</h6>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, necessitatibus!</p><br>
-				<h5>Direccion</h5>
-				<p>Lorem ipsum dolor sit amet.</p>
+				<h5 class="fuente2">Horario de Atención</h5>
+				<p class="fuente">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, necessitatibus!</p><br>
+				<h5 class="fuente2">Direccion</h5>
+				<p class="fuente">Lorem ipsum dolor sit amet.</p>
 			</div>
 			<div class="col-4">
-				<h5>Ayuda</h5>
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, maxime.</p><br>
-				<h5>Proteccion de datos</h5>
-				<p>Lorem ipsum dolor sit amet.</p>
+				<h5 class="fuente2">Ayuda</h5>
+				<p class="fuente">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, maxime.</p><br>
+				<h5 class="fuente2">Proteccion de datos</h5>
+				<p class="fuente">Lorem ipsum dolor sit amet.</p>
 			</div>
 			<div class="col-4">
-				<h5>Animalanida</h5>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nulla.</p><br>
-				<h5>Otrea cosa</h5>
-				<p>Lorem ipsum dolor sit amet.</p>
+				<h3 class="fuente2">Animalanida <i class="fas fa-paw"></i></h3>
+				<p class="fuente">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nulla.</p><br>
+				<h5 class="fuente2">Otrea cosa</h5>
+				<p class="fuente">Lorem ipsum dolor sit amet.</p>
 			</div>
 		</div>
-		</div>
+		</div><br>
 	</footer>
+	
 	<script src="https://kit.fontawesome.com/3675f85246.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
