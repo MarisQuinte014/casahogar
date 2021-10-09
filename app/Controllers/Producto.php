@@ -11,6 +11,23 @@ class Producto extends BaseController
     }
 
     public function registrar(){
-        echo("soy el controlador");
+
+        //1. recibir datos el from
+        $producto = $this->request->getPost("producto");
+        $fotografia = $this->request->getPost("fotografia");
+        $precioUnidad  = $this->request->getPost("precioUnidad");
+        $descripcion  = $this->request->getPost("descripcion");
+        $tipodeAnimal = $this->request->getPost("tipodeAnimal");
+
+        //2. construir un arreglo asociativo con los datos asosiativos
+        $datos=array(
+            "producto"=>$producto,
+            "fotografia"=>$fotografia,
+            "precioUnidad"=>$precioUnidad,
+            "descripcion"=>$descripcion,
+            "tipodeAnimal"=>$tipodeAnimal
+        );
+
+        print_r($datos);
     }
 }
