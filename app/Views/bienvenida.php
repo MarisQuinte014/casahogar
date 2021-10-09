@@ -16,6 +16,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Pacifico&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="<?= base_url('public/styles/estilos.css') ?>">
+	<!-- enrutar recursos que estan en la carpeta PUBLIC -->
 	<title>Animalandia</title>
 </head>
 
@@ -37,11 +38,18 @@
 						<li class="nav-item">
 							<a class="nav-link active fuente" aria-current="page" href="#">Sobre mi</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link active fuente" aria-current="page" href="<?= site_url('/RegistroProducto') ?>">Registro producto</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active fuente" aria-current="page" href="<?= site_url('/RegistroAnimales') ?>">Registro Animales</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
+
 	<section>
 		<div class="container mt-5">
 			<div class="row">
@@ -50,6 +58,7 @@
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<img src="<?= base_url('public/img/imagen1.jpg') ?>" class="d-block w-100" alt="imagen 1">
+
 							</div>
 							<div class="carousel-item">
 								<img src="<?= base_url('public/img/imagen2.jpg') ?>" class="d-block w-100" alt="iamgen 2">
@@ -71,76 +80,91 @@
 			</div>
 		</div>
 	</section>
+
 	<section>
 		<div class="container mt-2">
 			<div class="row d-flex justify-content-center">
 				<div class="col-8 text-center">
 					<h5 class="fuente2">Hogar de animales <span class="funte2">ANIMALANDIA</span></h5>
-					<p class="fuente">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum necessitatibus facere corporis incidunt, vitae delectus quod sed omnis, minima dolorum voluptatum beatae, officiis sint ad iste. Hic nisi delectus quos.</p>
+					<p class="fuente">Casa hogar Animalandia, atiende desde 1996 animales y fauna silvestre en estado de abandono, ofreciendo atención integral, además somos fabricantes de comida y accesorios para todo tipo de mascota</p>
 				</div>
 			</div>
 		</div>
 	</section>
+
 	<section>
 		<div class="container">
 			<div class="row d-flex justify-content-center">
 				<div class="col-1">
 					<img src="<?= base_url('public/img/dog-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<p class="fuente2 text-center">Perros</p>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/cat-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<p class="fuente2 text-center">Gatos</p>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/bird-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<p class="fuente2 text-center">Aves</p>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/horse-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<p class="fuente2 text-center">Caballos</p>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/rodent-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<p class="fuente2 text-center">Reptiles</p>
 				</div>
 			</div>
 			<br>
 		</div>
 	</section>
+
 	<section class="fondoApp"></section>
+
 	<section>
-		<div class="container">
-			<div class="row">
+		<div class="container mt-4">
+			<div class="row pt-44">
 				<div class="col-6 mt-3">
 					<img src="<?= base_url('public/img/imgen5.jpg') ?>" alt="" class="img-fluid w-100">
 				</div>
 				<div class="col-6 mt-3 text-center">
 					<h5 class="fuente2">Hogar <span class="funte2">ANIMALANDIA</span></h5>
-					<p class="fuente">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, laudantium eveniet optio delectus cum voluptate aperiam rerum voluptatibus quae ipsum dolor exercitationem mollitia maiores dignissimos similique iste molestiae, minus ipsam commodi? Voluptatem ipsum voluptatibus error repellat nihil, ea ullam provident consequuntur reiciendis libero quos molestias porro aut nam minus consequatur rem cumque omnis minima temporibus hic placeat suscipit totam. Consequatur porro, id eveniet veniam sit nulla, facere quos sint ipsum accusantium fugiat dolores perspiciatis, enim placeat officia natus dolore ratione quis. Quia nostrum quisquam consectetur. Eaque at libero repellat eos officiis. Error, tenetur quae? Debitis eos corporis repellat provident error.</p>
+					<p class="fuente">Somos una organización protectora de animales especializada, desde 1996, en la ayuda a perros y gatos maltratados y/o abandonados; una organización española totalmente independiente que no recibe subvenciones de organismos oficiales, empresas ni partidos políticos. Las cuotas de nuestros socios y las donaciones de nuestros simpatizantes permiten que nuestra labor sea sostenible y preservan nuestra libertad de acción. Contamos con un centro veterinario en Medellín abierto al público, que destina sus ingresos íntegramente al cuidado de los animales abandonados, y un centro de acogida en El Espinar.
+						Defendemos el “sacrificio cero”. Esto significa que establecemos una línea muy clara entre “el sacrificio” y “la eutanasia”. Nunca sacrificamos cachorros recién nacidos, ni animales cojos, ciegos, sordos o con enfermedades crónicas que sean tratables. Exclusivamente en caso de enfermedad en fase terminal que produzca un sufrimiento irreversible, se recurre a la eutanasia con toda la dignidad, el respeto y el amor que ellos merecen.</p>
 				</div>
 			</div>
 		</div>
 	</section>
+
 	<footer style="background-color: #EEE9E8;">
-		<div class="container mt-5" >
-		<div class="row">
-			<div class="col-4">
-				<h6 class="fuente2">Horario de Atención</h6>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, necessitatibus!</p><br>
-				<h5>Direccion</h5>
-				<p>Lorem ipsum dolor sit amet.</p>
+		<div class="container mt-5 pt-4">
+			<div class="row">
+				<div class="col-4">
+					<h6 class="fuente2">Horario de Atención</h6>
+					<p class="fuente">Lunes a viernes 7:00 am - 3:00 pm / Sábado: 7:00 am - 2:30 pm / Domingos y festivos 8:00 am - 3:00 pm</p><br>
+					<h5 class="fuente2">Direccion</h5>
+					<p class="fuente">Belén Altavista Calle 8A # 112-82 </p>
+				</div>
+				<div class="col-4">
+					<h5 class="fuente2">Ayuda</h5>
+					<p class="fuente">Glosario / Correo remoto / Monitoreo y desempeño de uso del sitio web.</p><br>
+					<h5 class="fuente2">Proteccion de datos</h5>
+					<p class="fuente">Protección de datos personales en el Municipio de Medellín.</p>
+				</div>
+				<div class="col-4">
+					<h3 class="fuente2"><i class="fas fa-paw"></i> Animalanida</h3>
+					<i class="fab fa-facebook fa-3x"></i>
+					<i class="fab fa-instagram fa-3x"></i>
+					<i class="fab fa-youtube fa-3x"></i><br><br><br>
+
+					
+					<p class="fuente">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
+				</div>
 			</div>
-			<div class="col-4">
-				<h5>Ayuda</h5>
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, maxime.</p><br>
-				<h5>Proteccion de datos</h5>
-				<p>Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="col-4">
-				<h5>Animalanida</h5>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nulla.</p><br>
-				<h5>Otrea cosa</h5>
-				<p>Lorem ipsum dolor sit amet.</p>
-			</div>
-		</div>
 		</div>
 	</footer>
+
 	<script src="https://kit.fontawesome.com/3675f85246.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>

@@ -32,7 +32,10 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-
+$routes->get('/RegistroProducto', 'Producto::index');
+$routes->post('/RegistroProducto/registrar', 'Producto::registrar');
+$routes->get('/RegistroAnimales', 'Animales::index');
+//accedo a un metodo con un punto
 /*
  * --------------------------------------------------------------------
  * Additional Routing
