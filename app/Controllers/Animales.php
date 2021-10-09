@@ -9,4 +9,17 @@ class Animales extends BaseController
     public function index(){
         return view('registroAnimales');
     }
+
+    public function registrarAnimales(){
+        
+        $datosAnimales=array(
+            "nombre"=>$nombre= $this->request->getPost("nombre"),
+            "edad"=>$edad= $this->request->getPost("edad"),
+            "foto"=>$foto= $this->request->getPost("foto"),
+            "descripcion"=>$descripcion= $this->request->getPost("descripcion"),
+            "tipoAnimal"=>$tipoAnimal= $this->request->getPost("tipoAnimal"),
+
+        );
+        print_r($datosAnimales);
+    }
 }

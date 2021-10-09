@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/RegistroProducto', 'Producto::index');
 $routes->post('/RegistroProducto/registrar', 'Producto::registrar');
+$routes->post('/RegistroAnimales/registrar', 'Animales::registrarAnimales');
 $routes->get('/RegistroAnimales', 'Animales::index');
 //accedo a un metodo con un punto
 /*

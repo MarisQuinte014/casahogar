@@ -57,27 +57,25 @@
                     <h1 class="text-center fuente2">Registro de Animales</h1>
                 </div>
                 <div class="col-6 pt-5 pb-5">
-                    <form>
+                    <form action="<?= site_url('/RegistroAnimales/registrar') ?>" method="POST">
                         <div class="mb-3">
                             <label for="nombre" class="form-label fuente">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+                            <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                             <label for="edad" class="form-label fuente">Edad:</label>
-                            <input type="text" class="form-control" id="edad">
+                            <input type="number" class="form-control" id="edad" name="edad">
                         </div>
                         <div class="mb-3">
                             <label for="foto" class="form-label fuente">Foto:</label>
-                            <input type="number" class="form-control" id="foto">
+                            <input type="text" class="form-control" id="foto" name="foto">
                         </div>
                         <div class="mb-3">
-                            <!-- <label for="exampleFormControlTextarea1">Descripción:</label> -->
-                            <textarea class="form-control fuente" id="descripcion" rows="3" placeholder="Descripción:"></textarea>
-
+                            <textarea class="form-control fuente" id="descripcion" name="descripcion" rows="3" placeholder="Descripción:"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="tipodeanimales" class="form-label fuente">Tipo de Animal:</label>
-                            <select class="form-control fuente">
+                            <select class="form-control fuente" name="tipoAnimal">
                                 <option>Perros</option>
                                 <option>Gatos</option>
                                 <option>Aves</option>
