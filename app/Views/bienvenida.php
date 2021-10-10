@@ -34,11 +34,6 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active fuente" aria-current="page" href="#">Inicio</a>
-						<li class="nav-item">
-							<a class="nav-link active fuente" aria-current="page" href="#">Sobre mi</a>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link active fuente" aria-current="page" href="<?= site_url('/RegistroProducto') ?>">Registro producto</a>
 						</li>
 						<li class="nav-item">
@@ -64,7 +59,7 @@
 								<img src="<?= base_url('public/img/imagen2.jpg') ?>" class="d-block w-100" alt="iamgen 2">
 							</div>
 							<div class="carousel-item">
-								<img src="<?= base_url('public/img/imagen1.jpg') ?>" class="d-block w-100" alt="imagen 3">
+								<img src="<?= base_url('public/img/imagen3.jpg') ?>" class="d-block w-100" alt="imagen 3">
 							</div>
 						</div>
 						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -84,8 +79,8 @@
 	<section>
 		<div class="container mt-2">
 			<div class="row d-flex justify-content-center">
-				<div class="col-8 text-center">
-					<h5 class="fuente2">Hogar de animales <span class="funte2">ANIMALANDIA</span></h5>
+				<div class="col-8 text-center mt-3">
+					<h5 class="mb-4 fuente2">Hogar de animales <span class="funte2">ANIMALANDIA</span></h5>
 					<p class="fuente">Casa hogar Animalandia, atiende desde 1996 animales y fauna silvestre en estado de abandono, ofreciendo atención integral, además somos fabricantes de comida y accesorios para todo tipo de mascota</p>
 				</div>
 			</div>
@@ -97,23 +92,23 @@
 			<div class="row d-flex justify-content-center">
 				<div class="col-1">
 					<img src="<?= base_url('public/img/dog-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
-					<p class="fuente2 text-center">Perros</p>
+					<p class="fuente2 text-center tituloTipo">Perros</p>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/cat-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
-					<p class="fuente2 text-center">Gatos</p>
+					<p class="fuente2 text-center tituloTipo">Gatos</p>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/bird-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
-					<p class="fuente2 text-center">Aves</p>
+					<p class="fuente2 text-center tituloTipo">Aves</p>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/horse-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
-					<p class="fuente2 text-center">Caballos</p>
+					<p class="fuente2 text-center tituloTipo">Caballos</p>
 				</div>
 				<div class="col-1">
 					<img src="<?= base_url('public/img/rodent-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
-					<p class="fuente2 text-center">Reptiles</p>
+					<p class="fuente2 text-center tituloTipo">Reptiles</p>
 				</div>
 			</div>
 			<br>

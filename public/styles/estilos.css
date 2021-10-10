@@ -1,9 +1,12 @@
 .fuente{
     font-family: 'Amatic SC', cursive;
+    font-size: 28px;
+    font-weight: 500;
 }
 
 .fuente2{
     font-family: 'Pacifico', cursive;
+    font-size: 35px;
 }
 
 .fondo{
@@ -23,3 +26,21 @@
     background-attachment: fixed;
     height: 400px;
 }
+.tituloTipo{
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
+
+.registroAnimales{
+    font-family: 'Pacifico', cursive;
+    font-size: 45px;
+}
+
+::placeholder{
+    font-weight: 700;
+}
+
+option{
+    font-weight: 700;
+}
+

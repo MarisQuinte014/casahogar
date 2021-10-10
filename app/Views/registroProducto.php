@@ -42,8 +42,8 @@
                             <a class="nav-link active fuente" aria-current="page" href="<?= site_url('/RegistroProducto') ?>">Registro producto</a>
                         </li>
                         <li class="nav-item">
-							<a class="nav-link active fuente" aria-current="page" href="<?= site_url('/RegistroAnimales') ?>">Registro Animales</a>
-						</li>
+                            <a class="nav-link active fuente" aria-current="page" href="<?= site_url('/RegistroAnimales') ?>">Registro Animales</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -54,21 +54,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 pt-5">
-                    <h1 class="text-center fuente2">Registro de Productos</h1>
+                    <h1 class="text-center registroAnimales">Registro de Productos</h1>
                 </div>
                 <div class="col-6 pt-5 pb-5">
                     <form action="<?= site_url('/RegistroProducto/registrar') ?>" method="POST">
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label fuente">Producto:</label>
-                            <input type="text" class="form-control" id="producto" name="producto" aria-describedby="emailHelp">
+                            <label for="exampleInputEmail1" class="form-label fuente"><b>Producto:</b></label>
+                            <input type="text" class="form-control fuente" id="producto" name="producto" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label fuente">Fotografia:</label>
-                            <input type="text" class="form-control" id="fotografia" name="fotografia">
+                            <label for="exampleInputPassword1" class="form-label fuente"><b>Fotografia:</b></label>
+                            <input type="text" class="form-control fuente" id="fotografia" name="fotografia">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label fuente">Precio Unidad:</label>
-                            <input type="number" class="form-control" id="precioUnidad" name="precioUnidad">
+                            <label for="exampleInputPassword1" class="form-label fuente"><b>Precio Unidad:</b></label>
+                            <input type="number" class="form-control fuente" id="precioUnidad" name="precioUnidad">
                         </div>
                         <div class="mb-3">
                             <!-- <label for="exampleFormControlTextarea1">Descripción:</label> -->
@@ -76,7 +76,7 @@
 
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label fuente">Tipo de Animal:</label>
+                            <label for="exampleInputPassword1" class="form-label fuente"><b>Tipo de Animal:</b></label>
                             <select class="form-control fuente" name="tipodeAnimal">
                                 <option>Perros</option>
                                 <option>Gatos</option>
@@ -85,7 +85,9 @@
                                 <option>Reptiles</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary fuente2">Enviar</button>
+                        <div class="text-center mt-5 d-grid gap-2">
+                            <button type="submit" class="btn btn-primary fuente"><b>Enviar</b></button>
+                        </div>
                     </form>
                 </div>
                 <div class="col-6 pt-5">
@@ -96,35 +98,35 @@
     </section>
 
     <footer style="background-color: #EEE9E8;">
-		<div class="container mt-5 pt-4">
-			<div class="row">
-				<div class="col-4">
-					<h6 class="fuente2">Horario de Atención</h6>
-					<p class="fuente">Lunes a viernes 7:00 am - 3:00 pm / Sábado: 7:00 am - 2:30 pm / Domingos y festivos 8:00 am - 3:00 pm</p><br>
-					<h5 class="fuente2">Direccion</h5>
-					<p class="fuente">Belén Altavista Calle 8A # 112-82 </p>
-				</div>
-				<div class="col-4">
-					<h5 class="fuente2">Ayuda</h5>
-					<p class="fuente">Glosario / Correo remoto / Monitoreo y desempeño de uso del sitio web.</p><br>
-					<h5 class="fuente2">Proteccion de datos</h5>
-					<p class="fuente">Protección de datos personales en el Municipio de Medellín.</p>
-				</div>
-				<div class="col-4">
-					<h3 class="fuente2"><i class="fas fa-paw"></i> Animalanida</h3>
-					<i class="fab fa-facebook fa-3x"></i>
-					<i class="fab fa-instagram fa-3x"></i>
-					<i class="fab fa-youtube fa-3x"></i><br><br><br>
+        <div class="container mt-5 pt-4">
+            <div class="row">
+                <div class="col-4">
+                    <h6 class="fuente2">Horario de Atención</h6>
+                    <p class="fuente">Lunes a viernes 7:00 am - 3:00 pm / Sábado: 7:00 am - 2:30 pm / Domingos y festivos 8:00 am - 3:00 pm</p><br>
+                    <h5 class="fuente2">Direccion</h5>
+                    <p class="fuente">Belén Altavista Calle 8A # 112-82 </p>
+                </div>
+                <div class="col-4">
+                    <h5 class="fuente2">Ayuda</h5>
+                    <p class="fuente">Glosario / Correo remoto / Monitoreo y desempeño de uso del sitio web.</p><br>
+                    <h5 class="fuente2">Proteccion de datos</h5>
+                    <p class="fuente">Protección de datos personales en el Municipio de Medellín.</p>
+                </div>
+                <div class="col-4">
+                    <h3 class="fuente2"><i class="fas fa-paw"></i> Animalanida</h3>
+                    <i class="fab fa-facebook fa-3x"></i>
+                    <i class="fab fa-instagram fa-3x"></i>
+                    <i class="fab fa-youtube fa-3x"></i><br><br><br>
 
-					
-					<p class="fuente">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+
+                    <p class="fuente">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://kit.fontawesome.com/3675f85246.js" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 
 </html>
