@@ -20,6 +20,12 @@ class Animales extends BaseController
             "tipoAnimal"=>$tipoAnimal= $this->request->getPost("tipoAnimal"),
 
         );
-        print_r($datosAnimales);
+       // print_r($datosAnimales);
+
+       if($this->validate('formularioAnimales')){
+        echo("Todo bien papa");
+    }else{
+        echo("tenemos problemas papa");
+    }
     }
 }

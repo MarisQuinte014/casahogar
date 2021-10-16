@@ -10,7 +10,7 @@ class Producto extends BaseController
         return view('registroProducto');
     }
 
-    public function registrar(){
+    public function registrarProducto(){
 
         //1. recibir datos el from
         $producto = $this->request->getPost("producto");
@@ -19,15 +19,23 @@ class Producto extends BaseController
         $descripcion  = $this->request->getPost("descripcion");
         $tipodeAnimal = $this->request->getPost("tipodeAnimal");
 
-        //2. construir un arreglo asociativo con los datos asosiativos
-        $datos=array(
-            "producto"=>$producto,
-            "fotografia"=>$fotografia,
-            "precioUnidad"=>$precioUnidad,
-            "descripcion"=>$descripcion,
-            "tipodeAnimal"=>$tipodeAnimal
-        );
+        //se aplican validaciones 
+        if($this->validate('formularioProducto')){
+            echo("Todo bien papa");
+        }else{
+            $mensaje = "HAY CAMPOS SIN LLENAR";
+            return redirect()->to(site_url('/RegistroProducto'))->with('mensaje',$mensaje);
+        }
 
-        print_r($datos);
+        //2. construir un arreglo asociativo con los datos asosiativos
+        // $datos=array(
+        //     "producto"=>$producto,
+        //     "fotografia"=>$fotografia,
+        //     "precioUnidad"=>$precioUnidad,
+        //     "descripcion"=>$descripcion,
+        //     "tipodeAnimal"=>$tipodeAnimal
+        // );
+
+        // print_r($datos);
     }
 }

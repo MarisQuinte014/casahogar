@@ -37,6 +37,21 @@ class Validation
         'single' => 'CodeIgniter\Validation\Views\single',
     ];
 
+    public $formularioProducto = [
+        'producto'=>'required',
+        'fotografia'=>'required',
+        'precioUnidad'=>'required',
+        'descripcion'=>'required',
+        'tipodeAnimal'=>'required'
+    ];
+    
+    public $formularioAnimales = [
+        'nombre'=>'required',
+        'edad'=>'required',
+        'foto'=>'required',
+        'descripcion'=>'required',
+        'tipoAnimal'=>'required'
+    ];
     //--------------------------------------------------------------------
     // Rules
     //--------------------------------------------------------------------
