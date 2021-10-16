@@ -122,6 +122,7 @@
 			<div class="row pt-44">
 				<div class="col-6 mt-3">
 					<img src="<?= base_url('public/img/imgen5.jpg') ?>" alt="" class="img-fluid w-100">
+					<img src="<?= base_url('public/img/imagen6.jpg') ?>" alt="" class="img-fluid w-100 mt-5">
 				</div>
 				<div class="col-6 mt-3 text-center">
 					<h5 class="fuente2">Hogar <span class="funte2">ANIMALANDIA</span></h5>
@@ -154,7 +155,7 @@
 					<i class="fab fa-youtube fa-3x"></i><br><br><br>
 
 					
-					<p class="fuente">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
+					<p class="fuente mt-5">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
 				</div>
 			</div>
 		</div>

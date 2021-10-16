@@ -34,11 +34,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active fuente" aria-current="page" href="#">Inicio</a>
-                        <li class="nav-item">
-                            <a class="nav-link active fuente" aria-current="page" href="#">Sobre mi</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link active fuente" aria-current="page" href="<?= site_url('/RegistroProducto') ?>">Registro producto</a>
                         </li>
                         <li class="nav-item">
@@ -59,22 +54,22 @@
                 <div class="col-6">
                     <form action="<?= site_url('/RegistroAnimales/registrar') ?>" method="POST">
                         <div class="mb-3">
-                            <label for="nombre" class="form-label fuente"><b>Nombre:</b></label>
+                            <label for="nombre" class="form-label fuente"><i class="fas fa-file-signature"></i><b> Nombre:</b></label>
                             <input type="text" class="form-control fuente" id="nombre" name="nombre" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
-                            <label for="edad" class="form-label fuente"><b>Edad:</b></label>
+                            <label for="edad" class="form-label fuente"><i class="fas fa-sort-numeric-up"></i><b> Edad:</b></label>
                             <input type="number" class="form-control fuente" id="edad" name="edad">
                         </div>
                         <div class="mb-3">
-                            <label for="foto" class="form-label fuente"><b>Foto:</b></label>
+                            <label for="foto" class="form-label fuente"><i class="fas fa-images"></i><b> Fotografia:</b></label>
                             <input type="text" class="form-control fuente" id="foto" name="foto">
                         </div>
                         <div class="mb-3">
                             <textarea class="form-control fuente" id="descripcion" name="descripcion" rows="3" placeholder="Descripción:"></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="tipodeanimales" class="form-label fuente"><b>Tipo de Animal:</b></label>
+                            <label for="tipodeanimales" class="form-label fuente"> <i class="fas fa-otter"></i><b> Tipo de Animal:</b></label>
                             <select class="form-control fuente tipoAnimal2" name="tipoAnimal">
                                 <option>Perros</option>
                                 <option>Gatos</option>
@@ -84,12 +79,13 @@
                             </select>
                         </div>
                         <div class="text-center mt-5 d-grid gap-2">
-                            <button type="submit" class="btn btn-success fuente"><b>Enviar</b></button>
+                            <button type="submit" class="btn btn-primary fuente"><i class="fas fa-vote-yea"></i><b> Enviar</b></button>
                         </div>
                     </form>
                 </div>
                 <div class="col-6 align-self-center">
-                    <img src="<?= base_url('public/img/animales.jpg') ?>" class="img-fluid w-100">
+                    <img src="<?= base_url('public/img/imagen8.png') ?>" class="img-fluid w-100 mb-3 rounded">
+                    <img src="<?= base_url('public/img/imagen9.jpg') ?>" class="img-fluid w-100 rounded">
                 </div>
             </div>
         </div>
@@ -117,7 +113,7 @@
                     <i class="fab fa-youtube fa-3x"></i><br><br><br>
 
 
-                    <p class="fuente">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
+                    <p class="mt-5 fuente">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
                 </div>
             </div>
         </div>

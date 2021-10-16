@@ -34,11 +34,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active fuente" aria-current="page" href="#">Inicio</a>
-                        <li class="nav-item">
-                            <a class="nav-link active fuente" aria-current="page" href="#">Sobre mi</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link active fuente" aria-current="page" href="<?= site_url('/RegistroProducto') ?>">Registro producto</a>
                         </li>
                         <li class="nav-item">
@@ -59,15 +54,15 @@
                 <div class="col-6 pt-5 pb-5">
                     <form action="<?= site_url('/RegistroProducto/registrar') ?>" method="POST">
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label fuente"><b>Producto:</b></label>
+                            <label for="exampleInputEmail1" class="form-label fuente"><i class="fas fa-bone"></i><b> Producto:</b></label>
                             <input type="text" class="form-control fuente" id="producto" name="producto" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label fuente"><b>Fotografia:</b></label>
+                            <label for="exampleInputPassword1" class="form-label fuente"><i class="fas fa-images"></i><b> Fotografia:</b></label>
                             <input type="text" class="form-control fuente" id="fotografia" name="fotografia">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label fuente"><b>Precio Unidad:</b></label>
+                            <label for="exampleInputPassword1" class="form-label fuente"><i class="fas fa-dollar-sign"></i><b> Precio Unidad:</b></label>
                             <input type="number" class="form-control fuente" id="precioUnidad" name="precioUnidad">
                         </div>
                         <div class="mb-3">
@@ -76,7 +71,7 @@
 
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label fuente"><b>Tipo de Animal:</b></label>
+                            <label for="exampleInputPassword1" class="form-label fuente"><i class="fas fa-otter"></i><b> Tipo de Animal:</b></label>
                             <select class="form-control fuente" name="tipodeAnimal">
                                 <option>Perros</option>
                                 <option>Gatos</option>
@@ -86,12 +81,13 @@
                             </select>
                         </div>
                         <div class="text-center mt-5 d-grid gap-2">
-                            <button type="submit" class="btn btn-primary fuente"><b>Enviar</b></button>
+                            <button type="submit" class="btn btn-primary fuente"><i class="fas fa-vote-yea"></i><b> Enviar</b></button>
                         </div>
                     </form>
                 </div>
                 <div class="col-6 pt-5">
-                    <img src="<?= base_url('public/img/productos.jpg') ?>" class="img-fluid w-100">
+                    <img src="<?= base_url('public/img/productos1.jpg') ?>" class="img-fluid w-100 rounded mb-5 mt-5">
+                    <img src="<?= base_url('public/img/imagen7.jpg') ?>" class="img-fluif w-100 rounded">
                 </div>
             </div>
         </div>
