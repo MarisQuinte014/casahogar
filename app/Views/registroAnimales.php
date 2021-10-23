@@ -45,7 +45,7 @@
         </nav>
     </header>
 
-    <section>
+    <main>
         <div class="container">
             <div class="row">
                 <div class="col-12 p-5">
@@ -89,6 +89,25 @@
                 </div>
             </div>
         </div>
+    </main>
+
+    <section>
+        <?php if(session('mensaje')): ?>
+        <div class="modal fade" id="ModalProducto" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text-white fondo">
+                        <h5 class="modal-title fuente2 ">Animalandia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="fuente"><?= (session('mensaje')) ?></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php unset($_SESSION['mensaje']); ?>
+        <?php endif ?>
     </section>
 
     <footer style="background-color: #EEE9E8;">
@@ -119,6 +138,7 @@
         </div>
     </footer>
 
+    <script type="module" src="<?= base_url('public/js/lanzarmodal.js') ?>"></script>
     <script src="https://kit.fontawesome.com/3675f85246.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>

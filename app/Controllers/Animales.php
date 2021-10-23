@@ -4,6 +4,8 @@
 //cambio el nombre de la clase y lo que retorna
 namespace App\Controllers;
 
+use App\Models\AnimalModelo;
+
 class Animales extends BaseController
 {
     public function index(){
@@ -12,20 +14,42 @@ class Animales extends BaseController
 
     public function registrarAnimales(){
         
-        $datosAnimales=array(
-            "nombre"=>$nombre= $this->request->getPost("nombre"),
-            "edad"=>$edad= $this->request->getPost("edad"),
-            "foto"=>$foto= $this->request->getPost("foto"),
-            "descripcion"=>$descripcion= $this->request->getPost("descripcion"),
-            "tipoAnimal"=>$tipoAnimal= $this->request->getPost("tipoAnimal"),
-
-        );
-       // print_r($datosAnimales);
+        $nombre= $this->request->getPost("nombre");
+        $edad= $this->request->getPost("edad");
+        $foto= $this->request->getPost("foto");
+        $descripcion= $this->request->getPost("descripcion");
+        $tipoAnimal= $this->request->getPost("tipoAnimal");
 
        if($this->validate('formularioAnimales')){
-        echo("Todo bien papa");
-    }else{
-        echo("tenemos problemas papa");
+        try {
+              //sacar una fotocopia de la clase(crear objeto)"instanciar la clase"
+              $modelo = new AnimalModelo();
+
+              //armo el paquete de datos a registrar
+              $datos=array(
+                  "nombre"=>$nombre,
+                  "edad"=>$edad,
+                  "foto"=>$foto,
+                  "descripcion"=>$descripcion,
+                  "tipo"=>$tipoAnimal
+               );
+
+              //agregro los datos 
+              $modelo->insert($datos);
+
+              //entrego una respuesta
+              $mensaje ="Exito agregando el producto";
+              return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+
+        } catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+        }
     }
+    else
+    {
+        $mensaje = "HAY CAMPOS SIN LLENAR";
+        return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+        }
     }
 }

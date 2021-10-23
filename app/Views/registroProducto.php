@@ -84,11 +84,11 @@
                             <label for="exampleInputPassword1" class="form-label fuente"><i class="fas fa-otter"></i><b>
                                     Tipo de Animal:</b></label>
                             <select class="form-control fuente" name="tipodeAnimal">
-                                <option>Perros</option>
-                                <option>Gatos</option>
-                                <option>Aves</option>
-                                <option>Caballos</option>
-                                <option>Reptiles</option>
+                                <option value="1">Perros</option>
+                                <option value="2">Gatos</option>
+                                <option value="3">Aves</option>
+                                <option value="4">Caballos</option>
+                                <option value="5">Reptiles</option>
                             </select>
                         </div>
                         <div class="text-center mt-5 d-grid gap-2">
