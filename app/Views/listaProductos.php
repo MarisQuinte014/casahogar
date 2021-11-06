@@ -69,7 +69,8 @@
                         <p class="card-text fuente">Descripción: <?= $producto["descripcion"]?></p>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#ModalDelete<?= $producto["idProducto"] ?>"
                             class="btn btn-primary"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#ModalEdit<?= $producto["idProducto"] ?>"
+                            class="btn btn-primary"><i class="fas fa-edit"></i></a>
                     </div>
                     <section>
                         <!-- Modal Eliminar-->
@@ -86,7 +87,6 @@
                                         <p class="fuente">Id del producto: <?= $producto["idProducto"] ?></p>
                                     </div>
                                     <div class="text-center modal-footer">
-                                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> -->
                                         <a href="<?= site_url('/Productos/eliminar'.$producto["idProducto"]) ?>"
                                             class="btn btn-danger">Eliminar</a>
                                     </div>
@@ -106,46 +106,39 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
-                                            <div class="col">
-                                                <form action="" method="">
+                                            <div class="col-3 align-self-center">
+                                                <img src="<?= $producto["foto"]?>" alt="foto" class="img-fluid w-100">
+                                            </div>
+                                            <div class="col-9">
+                                                <form action="<?= site_url('/Productos/editar'.$producto["idProducto"])?>" method="POST">
                                                     <div class="mb-3">
                                                         <label for="exampleInputEmail1" class="form-label fuente"><i
-                                                                class="fas fa-bone"></i><b>
-                                                                Producto:</b></label>
+                                                                class="fas fa-bone"></i><b>Producto:</b></label>
                                                         <input type="text" class="form-control fuente" id="producto"
-                                                            name="producto" aria-describedby="emailHelp">
+                                                            name="producto" value="<?= $producto["nombre"] ?>"
+                                                            aria-describedby="emailHelp">
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <label for="exampleInputPassword1" class="form-label fuente"><i
-                                                                class="fas fa-images"></i><b> Fotografia:</b></label>
-                                                        <input type="text" class="form-control fuente" id="fotografia"
-                                                            name="fotografia">
-                                                    </div>
+
                                                     <div class="mb-3">
                                                         <label for="exampleInputPassword1" class="form-label fuente"><i
                                                                 class="fas fa-dollar-sign"></i><b> Precio
                                                                 Unidad:</b></label>
                                                         <input type="number" class="form-control fuente"
-                                                            id="precioUnidad" name="precioUnidad">
+                                                            id="precioUnidad" name="precioUnidad"
+                                                            value="<?= $producto["precio"] ?>">
                                                     </div>
+
                                                     <div class="mb-3">
                                                         <!-- <label for="exampleFormControlTextarea1">Descripción:</label> -->
                                                         <textarea class="form-control fuente" id="descripcion"
-                                                            name="descripcion" rows="3"
-                                                            placeholder="Descripción:"></textarea>
-
+                                                            name="descripcion"
+                                                            rows="3"><?= $producto["descripcion"] ?></textarea>
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <label for="exampleInputPassword1" class="form-label fuente"><i
-                                                                class="fas fa-otter"></i><b>
-                                                                Tipo de Animal:</b></label>
-                                                        <select class="form-control fuente" name="tipodeAnimal">
-                                                            <option value="1">Perros</option>
-                                                            <option value="2">Gatos</option>
-                                                            <option value="3">Aves</option>
-                                                            <option value="4">Caballos</option>
-                                                            <option value="5">Reptiles</option>
-                                                        </select>
+
+                                                    <div class="text-center mt-5 ">
+                                                        <button type="submit" class="btn btn-primary fuente"><i
+                                                                class="fas fa-vote-yea"></i><b>
+                                                                Enviar</b></button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -162,9 +155,7 @@
     </main>
 
     <script src="https://kit.fontawesome.com/3675f85246.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 
 </html>

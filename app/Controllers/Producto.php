@@ -1,7 +1,5 @@
 <?php
-//todas las clases son con mayusculas y variales con minuscula
-//cada que creo una vista creo un controller
-//cambio el nombre de la clase y lo que retorna
+
 namespace App\Controllers;
 
 use App\Models\ProductoModelo;
@@ -89,6 +87,43 @@ class Producto extends BaseController
                 
         } catch (\Exception $error) {
             $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/RegistroProducto'))->with('mensaje',$mensaje);
+        }
+    }
+    public function editar($idProducto){
+
+        $producto = $this->request->getPost("producto");
+        $precioUnidad  = $this->request->getPost("precioUnidad");
+        $descripcion  = $this->request->getPost("descripcion");
+
+        if($this->validate('formularioEditarProducto')){
+            
+            //los objetos son las variables que utilizna las clases
+            //intentar
+            try {
+                //sacar una fotocopia de la clase(crear objeto)"instanciar la clase"
+                $modelo = new ProductoModelo();
+
+                //armo el paquete de datos a registrar
+                $datos=array(
+                    "nombre"=>$producto,
+                    "precio"=>$precioUnidad,
+                    "descripcion"=>$descripcion
+                 );
+
+                //agregro los datos 
+                $modelo->update($idProducto, $datos);
+
+                //entrego una respuesta
+                $mensaje ="Exito actualizando el producto";
+                return redirect()->to(site_url('/RegistroProducto'))->with('mensaje',$mensaje);
+
+            } catch (\Exception $error) {
+                $mensaje = $error->getMessage();
+                return redirect()->to(site_url('/RegistroProducto'))->with('mensaje',$mensaje);
+            }
+        }else{
+            $mensaje = "ERROR ACTUALIZANDO EL PRODUCTO ".$idProducto;
             return redirect()->to(site_url('/RegistroProducto'))->with('mensaje',$mensaje);
         }
     }
