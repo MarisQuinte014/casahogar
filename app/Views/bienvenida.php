@@ -132,7 +132,6 @@
 			</div>
 		</div>
 	</section>
-
 	<footer style="background-color: #EEE9E8;">
 		<div class="container mt-5 pt-4">
 			<div class="row">
@@ -152,9 +151,7 @@
 					<h3 class="fuente2"><i class="fas fa-paw"></i> Animalanida</h3>
 					<i class="fab fa-facebook fa-3x"></i>
 					<i class="fab fa-instagram fa-3x"></i>
-					<i class="fab fa-youtube fa-3x"></i><br><br><br>
-
-					
+					<i class="fab fa-youtube fa-3x"></i>
 					<p class="fuente mt-5">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
 				</div>
 			</div>

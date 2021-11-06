@@ -52,4 +52,8 @@ class Animales extends BaseController
         return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
         }
     }
+
+    public function buscar(){
+
+    }
 }

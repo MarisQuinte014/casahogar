@@ -54,4 +54,42 @@ class Producto extends BaseController
             return redirect()->to(site_url('/RegistroProducto'))->with('mensaje',$mensaje);
         }
     }
+
+    public function buscar(){
+
+        try {
+            //necesito llamar al modelo
+            //crear un objeto de clase modelo
+            $modelo = new ProductoModelo();
+
+            //utlizar el modelo para hablar con la bd y buscar todos los datos de la tabla 
+            $resultado = $modelo->findAll();
+
+            //organizo los datos como un arreglo asociativo
+            $productos = array("productos" => $resultado);
+
+            //cargar la vista entregandole los datos 
+            return view('listaProductos', $productos);
+
+        } catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/RegistroProducto'))->with('mensaje',$mensaje);
+        }
+    }
+
+    public function eliminar($idProducto){
+        try {
+            $modelo = new ProductoModelo();
+
+            //utlizar el modelo para hablar con la bd y buscar todos los datos de la tabla y eliminar el registro con el id capturado
+            $modelo->where('idProducto',$idProducto)->delete();
+
+            $mensaje ="Exito eliminando el producto";
+                return redirect()->to(site_url('/RegistroProducto'))->with('mensaje',$mensaje);
+                
+        } catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/RegistroProducto'))->with('mensaje',$mensaje);
+        }
+    }
 }

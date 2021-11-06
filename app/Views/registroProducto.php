@@ -100,6 +100,7 @@
                 <div class="col-6 pt-5">
                     <img src="<?= base_url('public/img/productos1.jpg') ?>" class="img-fluid w-100 rounded mb-5 mt-5">
                     <img src="<?= base_url('public/img/imagen7.jpg') ?>" class="img-fluif w-100 rounded">
+                    <a href="<?= site_url('/Producto/listado') ?>">Ver Inventario</a>
                 </div>
             </div>
         </div>
