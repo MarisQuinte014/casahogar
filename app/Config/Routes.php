@@ -39,7 +39,9 @@ $routes->post('/RegistroAnimales/registrar', 'Animales::registrarAnimales');
 $routes->get('/Producto/listado', 'Producto::buscar');
 $routes->get('/Animales/listado', 'Animales::buscar');
 $routes->get('/Productos/eliminar(:num)', 'Producto::eliminar/$1');
+$routes->get('/Animales/eliminar(:num)', 'Animales::eliminar/$1');
 $routes->post('/Productos/editar(:num)', 'Producto::editar/$1');
+$routes->post('/Animales/editar(:num)', 'Animales::editar/$1');
 
 //accedo a un metodo con un punto
 /*

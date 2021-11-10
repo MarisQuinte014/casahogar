@@ -86,6 +86,7 @@
                 <div class="col-6 align-self-center">
                     <img src="<?= base_url('public/img/imagen8.png') ?>" class="img-fluid w-100 mb-3 rounded">
                     <img src="<?= base_url('public/img/imagen9.jpg') ?>" class="img-fluid w-100 rounded">
+                    <a href="<?= site_url('/Animales/listado') ?>">Ver Inventario</a>
                 </div>
             </div>
         </div>

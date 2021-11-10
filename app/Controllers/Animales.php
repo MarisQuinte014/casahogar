@@ -54,6 +54,58 @@ class Animales extends BaseController
     }
 
     public function buscar(){
+        try{
+        $modelo = new AnimalModelo();
+        $resultado = $modelo->findAll();
+        $animales = array("animales" => $resultado);
+        return view('listaAnimales', $animales);
+        }
+        catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+        }
+    }
 
+    public function eliminar($idAnimal){
+        try {
+            $modelo = new AnimalModelo();
+
+            //utlizar el modelo para hablar con la bd y buscar todos los datos de la tabla y eliminar el registro con el id capturado
+            $modelo->where('idAnimal',$idAnimal)->delete();
+
+            $mensaje ="Exito eliminando el animal";
+                return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+                
+        } catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+        }
+    }
+
+    public function editar($idAnimal){
+        $nombre= $this->request->getPost("nombre");
+        $edad= $this->request->getPost("edad");
+        $descripcion= $this->request->getPost("descripcion");
+
+        if($this->validate('formularioEditarAnimales')){
+            try {
+                $modelo = new AnimalModelo();
+                $datos=array(
+                    "nombre"=>$nombre,
+                    "edad"=>$edad,
+                    "descripcion"=>$descripcion
+                );
+                $modelo->update($idAnimal,$datos);
+
+                $mensaje ="Exito actualizando el animal";
+                return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+            } catch (\Exception $error) {
+                $mensaje = $error->getMessage();
+                return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+            }
+        }else{
+            $mensaje = "ERROR ACTUALIZANDO EL ANIMAL ".$idAnimal;
+            return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+        }
     }
 }
