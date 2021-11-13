@@ -39,6 +39,12 @@
                         <li class="nav-item">
                             <a class="nav-link active fuente" aria-current="page" href="<?= site_url('/RegistroAnimales') ?>">Registro Animales</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fuente" aria-current="page" href="<?= site_url('/Animales/listado') ?>">Inventario de Animales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fuente" aria-current="page" href="<?= site_url('/Producto/listado') ?>">Inventario de Productos</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -52,7 +58,7 @@
                     <h1 class="text-center registroAnimales">Registro de Animales</h1>
                 </div>
                 <div class="col-6">
-                    <form action="<?= site_url('/RegistroAnimales/registrar') ?>" method="POST">
+                    <form action="<?= site_url('/RegistroAnimales/registrar')?>" method="POST">
                         <div class="mb-3">
                             <label for="nombre" class="form-label fuente"><i class="fas fa-file-signature"></i><b> Nombre:</b></label>
                             <input type="text" class="form-control fuente" id="nombre" name="nombre" aria-describedby="emailHelp">
@@ -71,11 +77,11 @@
                         <div class="mb-3">
                             <label for="tipodeanimales" class="form-label fuente"> <i class="fas fa-otter"></i><b> Tipo de Animal:</b></label>
                             <select class="form-control fuente tipoAnimal2" name="tipoAnimal">
-                                <option>Perros</option>
-                                <option>Gatos</option>
-                                <option>Aves</option>
-                                <option>Caballos</option>
-                                <option>Reptiles</option>
+                                <option value="1">>Perros</option>
+                                <option value="2">>Gatos</option>
+                                <option value="3">>Aves</option>
+                                <option value="4">>Caballos</option>
+                                <option value="5">>Reptiles</option>
                             </select>
                         </div>
                         <div class="text-center mt-5 d-grid gap-2">
@@ -86,7 +92,6 @@
                 <div class="col-6 align-self-center">
                     <img src="<?= base_url('public/img/imagen8.png') ?>" class="img-fluid w-100 mb-3 rounded">
                     <img src="<?= base_url('public/img/imagen9.jpg') ?>" class="img-fluid w-100 rounded">
-                    <a href="<?= site_url('/Animales/listado') ?>">Ver Inventario</a>
                 </div>
             </div>
         </div>
@@ -109,6 +114,14 @@
         </div>
         <?php unset($_SESSION['mensaje']); ?>
         <?php endif ?>
+    </section>
+
+    <section>
+        <div class="container-button fixed-bottom">
+            <div class="inventario">
+                <a href=""><i class="fas fa-book fa-2x"></i></a>
+            </div>
+        </div>
     </section>
 
     <footer style="background-color: #EEE9E8;">

@@ -11,9 +11,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
    
     <!-- fuente 3 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet"> -->
 
     <!-- fuente 2 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fondo mb-5">
             <div class="container-fluid">
-                <a class="navbar-brand fuente" href="#">
+                <a class="navbar-brand fuente" href="<?= site_url('/') ?>">
                     <i class="fas fa-paw"></i>
                     ANIMALANDIA
                 </a>
@@ -48,6 +48,12 @@
                         <li class="nav-item">
                             <a class="nav-link active fuente" aria-current="page"
                                 href="<?= site_url('/RegistroAnimales') ?>">Registro Animales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fuente" aria-current="page" href="<?= site_url('/Animales/listado') ?>">Inventario de Animales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fuente" aria-current="page" href="<?= site_url('/Producto/listado') ?>">Inventario de Productos</a>
                         </li>
                     </ul>
                 </div>
@@ -68,19 +74,19 @@
             <div class="row row-cols-1 row-cols-md-5 g-4">
                 <?php foreach($productos as $producto):?>
                 <div class="card">
-                    <img src="<?= $producto["foto"]?>" class="card-img-top h-100" alt="...">
+                    <img src="<?= $producto["foto"]?>" class="imagenes1">
                     <div class="card-body p-3">
-                        <h5 class="card-title fuente3"><?= $producto["nombre"]?></h5>
-                        <p class="card-text fuente">Precio: <?= $producto["precio"]?></p>
+                        <h5 class="fuente2"><?= $producto["nombre"]?></h5>
+                        <p class="card-text fuente">Precio: $<?= $producto["precio"]?></p>
                         <p class="card-text fuente">Descripción: <?= $producto["descripcion"]?></p>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#ModalDelete<?= $producto["idProducto"] ?>"
-                            class="btn btn-primary"><i class="fas fa-trash-alt"></i></a>
+                        <button href="#" data-bs-toggle="modal" data-bs-target="#ModalDelete<?= $producto["idProducto"] ?>"
+                            class="btn btn-primary"><i class="fas fa-trash-alt"></i></button>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#ModalEdit<?= $producto["idProducto"] ?>"
                             class="btn btn-primary"><i class="fas fa-edit"></i></a>
                     </div>
                     <section>
                         <!-- Modal Eliminar-->
-                        <div class="modal fade" id="ModalDelete<?= $producto["idProducto"] ?>" aria-hidden="true">
+                        <div class="modal fade" id="ModalDelete <?= $producto["idProducto"] ?>" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header fondo">

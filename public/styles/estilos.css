@@ -10,7 +10,9 @@
 }
 
 .fuente3{
-    font-family: 'Fjalla One', 'Pacifico';
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    /* font-weight: 100; */
 }
 
 .fondo{
@@ -51,3 +53,4 @@ option{
 .imagenes{
     border-radius: 12;
 }
+

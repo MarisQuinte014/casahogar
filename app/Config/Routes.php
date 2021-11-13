@@ -43,6 +43,14 @@ $routes->get('/Animales/eliminar(:num)', 'Animales::eliminar/$1');
 $routes->post('/Productos/editar(:num)', 'Producto::editar/$1');
 $routes->post('/Animales/editar(:num)', 'Animales::editar/$1');
 
+
+//Rutas de Animales
+$routes->get('/AnimalesPerros', 'Animales::buscarAnimalPerro');
+$routes->get('/AnimalesGatos', 'Animales::buscarAnimalGato');
+$routes->get('/AnimalesAves', 'Animales::buscarAnimalAve');
+$routes->get('/AnimalesCaballos', 'Animales::buscarAnimalCaballo');
+$routes->get('/AnimalesReptiles', 'Animales::buscarAnimalReptil');
+
 //accedo a un metodo con un punto
 /*
  * --------------------------------------------------------------------

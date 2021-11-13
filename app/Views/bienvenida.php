@@ -24,7 +24,7 @@
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark fondo">
 			<div class="container-fluid">
-				<a class="navbar-brand fuente" href="#">
+				<a class="navbar-brand fuente" href="<?= site_url('/') ?>">
 					<i class="fas fa-paw"></i>
 					ANIMALANDIA
 				</a>
@@ -39,6 +39,12 @@
 						<li class="nav-item">
 							<a class="nav-link active fuente" aria-current="page" href="<?= site_url('/RegistroAnimales') ?>">Registro Animales</a>
 						</li>
+						<li class="nav-item">
+                            <a class="nav-link active fuente" aria-current="page" href="<?= site_url('/Animales/listado') ?>">Inventario de Animales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fuente" aria-current="page" href="<?= site_url('/Producto/listado') ?>">Inventario de Productos</a>
+                        </li>
 					</ul>
 				</div>
 			</div>
@@ -91,23 +97,33 @@
 		<div class="container">
 			<div class="row d-flex justify-content-center">
 				<div class="col-1">
-					<img src="<?= base_url('public/img/dog-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<a href="<?= site_url('/AnimalesPerros') ?>" method="GET">
+						<img src="<?= base_url('public/img/dog-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					</a>
 					<p class="fuente2 text-center tituloTipo">Perros</p>
 				</div>
 				<div class="col-1">
-					<img src="<?= base_url('public/img/cat-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<a href="<?= site_url('/AnimalesGatos') ?>">
+						<img src="<?= base_url('public/img/cat-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					</a>
 					<p class="fuente2 text-center tituloTipo">Gatos</p>
 				</div>
 				<div class="col-1">
-					<img src="<?= base_url('public/img/bird-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<a href="<?= site_url('/AnimalesAves') ?>">
+						<img src="<?= base_url('public/img/bird-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					</a>
 					<p class="fuente2 text-center tituloTipo">Aves</p>
 				</div>
 				<div class="col-1">
-					<img src="<?= base_url('public/img/horse-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<a href="<?= site_url('/AnimalesCaballos') ?>">
+						<img src="<?= base_url('public/img/horse-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					</a>
 					<p class="fuente2 text-center tituloTipo">Caballos</p>
 				</div>
 				<div class="col-1">
-					<img src="<?= base_url('public/img/rodent-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					<a href="<?= site_url('/AnimalesReptiles') ?>">
+						<img src="<?= base_url('public/img/rodent-icon.png') ?>" alt="" class="img-fluid w-100 zoom">
+					</a>
 					<p class="fuente2 text-center tituloTipo">Reptiles</p>
 				</div>
 			</div>

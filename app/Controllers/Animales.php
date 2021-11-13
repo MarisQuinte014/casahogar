@@ -108,4 +108,65 @@ class Animales extends BaseController
             return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
         }
     }
+
+    public function buscarAnimalPerro(){
+        try{
+            $modelo = new AnimalModelo();
+            $buscarAnimal = $modelo->buscarAnimalPerro();
+
+            $animales = array("animales"=>$buscarAnimal);
+            return view('listaAnimales',$animales);
+        }catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+        }
+    }
+    public function buscarAnimalGato(){
+        try{
+        $modelo = new AnimalModelo();
+        $buscarAnimal = $modelo->buscarAnimalGato();
+
+        $animales = array("animales"=>$buscarAnimal);
+        return view('listaAnimales', $animales);
+        }catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+        }
+    }
+    public function buscarAnimalAve(){
+        try{
+        $modelo = new AnimalModelo();
+        $buscarAnimal = $modelo->buscarAnimalAve();
+
+        $animales = array("animales"=>$buscarAnimal);
+        return view('listaAnimales', $animales);
+        }catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+        }
+    }
+    public function buscarAnimalCaballo(){
+        try{
+        $modelo = new AnimalModelo();
+        $buscarAnimal = $modelo->buscarAnimalCaballo();
+
+        $animales = array("animales"=>$buscarAnimal);
+        return view('listaAnimales', $animales);
+        }catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+        }
+    }
+    public function buscarAnimalReptil(){
+        try{
+        $modelo = new AnimalModelo();
+        $buscarAnimal = $modelo->buscarAnimalReptil();
+
+        $animales = array("animales"=>$buscarAnimal);
+        return view('listaAnimales', $animales);
+        }catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/RegistroAnimales'))->with('mensaje',$mensaje);
+        }
+    }
 }
